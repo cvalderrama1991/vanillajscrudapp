@@ -1,0 +1,163 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --theme: rgb(200, 200, 200);
+  --btn: #F2A359;
+  --primary: #F2DC5D;
+  --darkblue: rgb(41,58,76);
+  --text: black;
+  --header-height: 3rem;
+}
+body {
+  background-color: var(--theme);
+  font-family: 'Poppins', sans-serif;
+}
+.main-header {
+  background-color: var(--primary);
+  height: var(--header-height);
+  width: 100%;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 3;
+}
+.main-header h1 {
+  color: var(--text);
+}
+.main-header > button {
+  background-color: var(--btn);
+  color: var(--text);
+  height: 2rem;
+  padding: 0 0.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+.customer-section {
+  padding-top: var(--header-height);
+  position: relative;
+}
+.dialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  border-radius: 1rem;
+  padding: 0.75rem;
+}
+.dialog .dialog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dialog .dialog-header > button {
+  border: none;
+  background-color: transparent;
+  height: 1.5rem;
+  width: 1.5rem;
+  display: grid;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.dialog .dialog-header > button .layer {
+  background-color: black;
+  height: 4px;
+  width: 100%;
+  border-radius: 4px;
+  position: absolute; 
+}
+.dialog .dialog-header > button .layer:nth-of-type(1) {
+  transform: rotate(45deg);
+}
+.dialog .dialog-header > button .layer:nth-of-type(2) {
+  transform: rotate(-45deg);
+}
+.form {
+  height: auto;
+  width: 100%;
+  display: grid;
+  align-items: center;
+  grid-gap: 1rem;
+}
+.form .form-control {
+  display: grid;
+}
+.form .form-control label {
+  color: var(--text);
+  height: 2rem;
+  display: grid;
+  align-items: center;
+}
+.form .form-control input {
+  height: 2rem;
+  padding: 0 0.25rem;
+  color: var(--text);
+  border: 1px solid black;
+  border-radius: 2px;
+  z-index: 2;
+}
+.form .form-control.success input {
+  background-color: rgba(0, 255, 0, 0.3);
+}
+.form .form-control.error input {
+  background-color: rgba(255, 0, 0, 0.3);
+}
+.form .form-control small {
+  color: var(--text);
+  visibility: hidden;
+  color: red;
+}
+.form .form-control.error small {
+  visibility: visible;
+}
+.form > button {
+  height: 2rem;
+  width: 100%;
+  background-color: var(--btn);
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+table {
+  /* border-collapse: collapse; */
+  width: 100%;
+  border-radius: 0.5rem 0.5rem 0 0;
+  /* overflow: hidden; */
+}
+table thead tr {
+  background-color: var(--primary);
+  text-align: left;
+  color: var(--text);
+}
+table th,
+table td {
+  padding: 0.75rem;
+}
+.table-row {
+  border-bottom: 1px solid #ddd;
+}
+.table-row:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+.btn {
+  border: none;
+  padding: 0.5rem;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.update-btn {
+  background-color:#4d85e0;
+}
+.delete-btn {
+  background-color:rgb(175, 5, 5);
+}
