@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <script defer src="/app.js"></script>
+  <title>CRUD Application</title>
+</head>
+<body>
+  <header class="main-header">
+    <h1>CRUD Application</h1>
+    <button id="open-submit-dialog-btn">Add New Customer</button>
+  </header>
+  <main>
+    <section class="customer-section">
+      <!-- Submit Dialog Start -->
+      <dialog id="submit-dialog" class="dialog">
+        <header class="dialog-header">
+          <h2>Add Customer</h2>
+          <button id="close-submit-dialog-btn">
+            <span class="layer"></span>
+            <span class="layer"></span>
+          </button>
+        </header>
+        <!-- Submit Form Start -->
+        <form id="submit-form" class="form">
+          <div class="form-control">
+            <label for="first-name-input">First Name</label>
+            <input type="text" id="first-name-input" autocomplete="off">
+          </div>
+          <div class="form-control">
+            <label for="last-name-input">Last Name</label>
+            <input type="text" id="last-name-input" autocomplete="off">
+          </div>
+          <div class="form-control">
+            <label for="email-input">Email</label>
+            <input type="email" id="email-input" autocomplete="off">
+          </div>
+          <button type="submit">Add Customer</button>
+        </form>
+        <!-- Submit Form End -->
+      </dialog>
+      <!-- Submit Dialog End -->
+      <!-- Update Dialog Start -->
+      <dialog id="update-dialog" class="dialog">
+        <header class="dialog-header">
+          <h2>Update Customer</h2>
+          <button id="close-update-dialog-btn">
+            <span class="layer"></span>
+            <span class="layer"></span>
+          </button>
+        </header>
+        <!-- Update Form Start -->
+        <form id="update-form" class="form">
+          <div class="form-control">
+            <label for="update-first-name-input">Update First Name</label>
+            <input type="text" id="update-first-name-input" autocomplete="off">
+          </div>
+          <div class="form-control">
+            <label for="update-last-name-input">Update Last Name</label>
+            <input type="text" id="update-last-name-input" autocomplete="off">
+          </div>
+          <div class="form-control">
+            <label for="update-email-input">Update Email</label>
+            <input type="email" id="update-email-input" autocomplete="off">
+          </div>
+          <button type="submit">Update Customer</button>
+        </form>
+        <!-- Update Form End -->
+      </dialog>
+      <!-- Update Dialog Start -->
+      <!-- Table Start -->
+      <table id="customer-table">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+      <!-- Table End -->
+      <!-- Template Start -->
+      <template id="template-table-row">
+        <tr class="table-row">
+          <td data-first-name-text></td>
+          <td data-last-name-text></td>
+          <td data-email-text></td>
+          <td>
+            <button data-button-update class="btn update-btn">Update</button>
+            <button data-button-delete class="btn delete-btn">Delete</button>
+          </td>
+        </tr>
+      </template>
+      <!-- Template Start -->
+    </section>
+  </main>
+</body>
+</html>
